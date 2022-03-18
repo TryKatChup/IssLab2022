@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>iss22 &#8212; iss22 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduzione" href="Introduzione.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="iss22">
+<h1>iss22<a class="headerlink" href="#iss22" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduzione.html">Introduzione</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduzione.html#contenuti-del-corso">Contenuti del corso</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#fase1">FASE1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#fase2">FASE2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#fase3">FASE3</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Introduzione.html#materiale-didattico">Materiale didattico</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduzione.html#primi-passi-operativi">Primi passi operativi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#su-pc">Su PC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#su-raspberrypi">Su RaspberryPi</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Introduzione.html#valutazione-finale">Valutazione finale</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#dettagli-sul-colloquio-orale">Dettagli sul colloquio orale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Introduzione.html#possibili-domande-finali">Possibili domande finali</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CostruireSoftware.html">Costruire software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#ingegneria">Ingegneria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#programmatori-non-ingegneri">Programmatori = (non) ingegneri?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#sviluppo-bottomup">Sviluppo bottomUp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#modelli">Modelli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#la-crisi-del-software">La crisi del software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#richiami">Richiami</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#il-ruolo-dell-architettura">Il ruolo dell’architettura</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#design-patterns">Design patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#dimensioni">Dimensioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#struttura">Struttura</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#interazione">Interazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CostruireSoftware.html#terminologia-di-riferimento">Terminologia di riferimento</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CostruireSoftware.html#un-problema-applicativo">Un problema ‘applicativo’</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#comportamento">Comportamento</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CostruireSoftware.html#automi-a-stati-finiti">Automi a stati finiti</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#linguaggi">Linguaggi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#abstraction-gap-e-topdown">Abstraction GAP e topDown</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CostruireSoftware.html#indicazioni-sul-processo-di-produzione">Indicazioni sul processo di produzione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#id1">SCRUM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#il-motto">Il motto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#il-template">Il template</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CostruireSoftware.html#l-analisi-dei-requisiti">L’analisi dei requisiti</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CostruireSoftware.html#l-analisi-del-problema">L’analisi del problema</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CostruireSoftware.html#l-architettura-logica">L’architettura logica</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#progettazione-e-sviluppo-come-processo-evolutivo">Progettazione e sviluppo come processo evolutivo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#il-testing">Il testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#dal-testing-a-devops">Dal testing a DevOps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CostruireSoftware.html#passi-operativi-a-regime">Passi operativi ‘a regime’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WorkspaceSetup.html">WorkspaceSetup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="WorkspaceSetup.html#creazione-progetto-con-gradle">Creazione progetto con Gradle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WorkspaceSetup.html#creazione-di-un-progetto-vuoto">Creazione di un progetto vuoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WorkspaceSetup.html#verso-l-applicazione">Verso l’applicazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WorkspaceSetup.html#uso-di-git">Uso di GIT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="WorkspaceSetup.html#creazione-di-un-repository-remoto">Creazione di un repository remoto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystem.html">RadarSystem</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystem.html#requisiti">Requisiti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystem.html#analisi-dei-requisiti">Analisi dei Requisiti</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystem.html#tracciabilita">Tracciabilità</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystem.html#user-stories">User stories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystem.html#piano-di-testing-funzionale">Piano di testing (funzionale)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystem.html#glossario">Glossario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystem.html#domande-al-committente">Domande al committente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystem.html#in-sintesi">In sintesi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystem.html#se-non-fosse-distribuito">Se non fosse distribuito …</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystem.html#impostazione-del-workspace">Impostazione del workspace</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemAnalisi.html">Analisi del problema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemAnalisi.html#premessa-importante">Premessa importante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemAnalisi.html#dispositivi-di-input-e-di-output">Dispositivi di input e di output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemAnalisi.html#il-pattern-observer">Il pattern observer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemAnalisi.html#un-approccio-bottomup">Un approccio BottomUp</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemAnalisi.html#chi-realizza-la-logica-applicativa">Chi realizza la logica applicativa?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemAnalisi.html#quale-collante-i-protocolli-di-comunicazione">Quale ‘collante’? I protocolli di comunicazione</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemAnalisi.html#tipi-di-protocollo">Tipi di protocollo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemAnalisi.html#considerazioni-architetturali">Considerazioni architetturali</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemAnalisi.html#tipi-di-interazione">Tipi di interazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemAnalisi.html#un-primo-abstraction-gap">Un primo abstraction gap</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemProdottiAnalisi.html">Prodotti della analisi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#architettura-logica-come-modello-di-riferimento">Architettura logica come modello di riferimento</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#architettura-ad-oggetti">Architettura ad oggetti</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#modello-ad-oggetti-del-dominio">Modello ad oggetti del dominio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#le-interfacce-iled-e-iradardisplay">Le interfacce ILed e IRadarDisplay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#le-interfacce-idistance-e-isonar">Le interfacce IDistance e ISonar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#architettura-logica-del-sistema">Architettura logica del sistema</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#la-logica-del-controller">La logica del Controller</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#dagli-oggetti-alla-distribuzione-i-design-patterns">Dagli oggetti alla distribuzione: i design patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#l-interfaccia-interaction2021">L’interfaccia <code class="docutils literal notranslate"><span class="pre">Interaction2021</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#il-concetto-di-oggetto-enabler">Il concetto di ‘oggetto enabler’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProdottiAnalisi.html#piano-di-lavoro">Piano di lavoro</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemProgetto.html">Progettazione e sviluppo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#sprint1-componenti-per-i-dispositivi-di-i-o">SPRINT1: Componenti per i dispositivi di I/O</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#devicefactory-e-file-di-configurazione">DeviceFactory e file di configurazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#utilita">Utilità</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#la-classe-colorsout">La classe <code class="docutils literal notranslate"><span class="pre">ColorsOut</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#la-classe-basicutils">La classe <code class="docutils literal notranslate"><span class="pre">BasicUtils</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#dispositivi-reali-e-mock">Dispositivi reali e Mock</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#il-led">Il Led</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#la-classe-astratta-ledmodel">La classe astratta LedModel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#il-ledmock">Il LedMock</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#il-ledconcrete">Il LedConcrete</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#testing-del-dispositivo-led">Testing del dispositivo Led</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#il-sonar">Il Sonar</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#la-classe-astratta-sonarmodel">La classe astratta SonarModel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#la-classe-distance">La classe Distance</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#la-produzione-dei-dati">La produzione dei dati</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#il-sonarmock">Il SonarMock</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#il-sonarconcrete">Il SonarConcrete</a></li>
+<li class="toctree-l5"><a class="reference internal" href="RadarSystemProgetto.html#testing-del-dispositivo-sonar">Testing del dispositivo Sonar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#sprint1-l-applicazione">SPRINT1: L’applicazione</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#il-controller">Il Controller</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#azioni-di-fine-lavoro">Azioni di fine lavoro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#il-funzionamento-del-controller">Il funzionamento del Controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#ledalarmusecase">LedAlarmUsecase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemProgetto.html#radarguiusecase">RadarGuiUsecase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#il-sistema-in-locale">Il sistema in locale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#l-interfaccia-iapplication">L’interfaccia IApplication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#fase-di-setup">Fase di setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#fase-di-configurazione">Fase di configurazione</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemProgetto.html#utilita-per-il-testing">Utilità per il testing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#testing-su-pc">Testing (su PC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#sprint1-deployment-su-raspberrypi">SPRINT1: Deployment su RaspberryPi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemProgetto.html#un-sistema-piu-reattivo">Un sistema più reattivo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemSupporti.html">Supporti per comunicazioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#radardisplay-su-pc">RadarDisplay su PC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#controller-e-radardisplay-su-pc">Controller e RadarDisplay su PC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#tcpclientsupport">TcpClientSupport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#tcpconnection-implementa-interaction2021"><code class="docutils literal notranslate"><span class="pre">TcpConnection</span></code> implementa <code class="docutils literal notranslate"><span class="pre">Interaction2021</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#tcp-server">TCP Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#l-interfaccia-iapplmsghandler">L’interfaccia <code class="docutils literal notranslate"><span class="pre">IApplMsgHandler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#applmsghandler-implementa-iapplmsghandler"><code class="docutils literal notranslate"><span class="pre">ApplMsgHandler</span></code> implementa <code class="docutils literal notranslate"><span class="pre">IApplMsgHandler</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#il-tcpserver-come-oggetto-attivo">Il TCPserver come oggetto attivo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#il-funzionamento-del-tcpserver">Il funzionamento del TCPserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#tcpapplmessagehandler">TcpApplMessageHandler</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#una-testunit">Una TestUnit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#metodi-before-after">Metodi before/after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#l-handler-dei-messaggi-applicativi-naivehandler">L’handler dei messaggi applicativi <code class="docutils literal notranslate"><span class="pre">NaiveHandler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#un-semplice-client-per-i-test">Un semplice client per i test</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#test-per-l-interazione-senza-server">Test per l’interazione senza server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#test-per-l-interazione-client-server">Test per l’interazione client-server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#test-con-piu-clienti">Test con più clienti</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#proxyasclient">ProxyAsClient</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#setconnection">setConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#sendcommandonconnection">sendCommandOnConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#sendrequestonconnection">sendRequestOnConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#testing-del-proxyasclient">Testing del <span class="xref std std-ref">ProxyAsClient</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#uso-del-proxyasclient">Uso del <span class="xref std std-ref">ProxyAsClient</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#comm2022-deployment">Comm2022: Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RadarSystemSupporti.html#sprint2-radarsystem-distribuito">SPRINT2: RadarSystem distribuito</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RadarSystemSupporti.html#refactoring-del-codice-su-raspberry">Refactoring del codice su Raspberry</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#proxy-per-il-radar">Proxy per il radar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#radarapplhandler">RadarApplHandler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RadarSystemSupporti.html#sprint2-deployment">SPRINT2: Deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RaspberrySoftware.html">RaspberrySoftware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#azioni-preliminari">Azioni Preliminari</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#se-non-abbiamo-wifi">Se non abbiamo WIFI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#uno-sguardo-al-sistema">Uno sguardo al sistema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#abilitazione">Abilitazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#installazione-base-2022">Installazione-base 2022</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#java">Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#git">GIT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#cmake">cmake</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#altre-installazioni">Altre Installazioni</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#node-ed-express">Node ed Express</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#samba">Samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#aiocoap">aiocoap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#shellinabox">Shellinabox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#ambiente-virtuale-python">Ambiente virtuale Python</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#installezione-di-virtualenv">Installezione di virtualenv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#installezione-di-virtualenvwrapper">Installezione di virtualenvwrapper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#creazione-di-un-virtual-environment">Creazione di un virtual environment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#multi-media">Multi-Media</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#audio-con-alsa">Audio con alsa</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#raspicam">RaspiCam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#webcam">WebCam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspberrySoftware.html#mjpg-streamer">mjpg-streamer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#pygame">pygame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="RaspberrySoftware.html#opencv">opencv</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#ngrok">ngrok</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#wiringpi-on-bullseye">wiringpi on Bullseye</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#websocket">websocket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#docker">Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberrySoftware.html#docker-compose">Docker-compose</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RaspBasicCode.html">RaspBasicCode</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="RaspBasicCode.html#id1">wiringpi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspBasicCode.html#comandi-utili">Comandi utili</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspBasicCode.html#primi-programmi">Primi programmi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="RaspBasicCode.html#usiamo-un-led">Usiamo un LED</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#accendiamo-il-led-usando-shell-script">Accendiamo il led usando shell script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#accendiamo-il-led-usando-gpio">Accendiamo il led usando gpio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#accendiamo-il-led-usando-python">Accendiamo il led usando Python</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RaspBasicCode.html#usiamo-un-sonar-hc-sr04">Usiamo un SONAR HC-SR04</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#attiviamo-il-sonar-usando-python">Attiviamo il sonar usando Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#attiviamo-il-sonar-usando-c">Attiviamo il sonar usando C</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="RaspBasicCode.html#accendiamo-il-led-se-qualcosa-si-avvicina">Accendiamo il LED se qualcosa si avvicina</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#soluzione-in-c">Soluzione in C</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RaspBasicCode.html#soluzione-in-python">Soluzione in Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/logo-unibo.gif" alt="Logo"/>
+    
+    <h1 class="logo logo-name">iss22</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduzione.html">Introduzione</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CostruireSoftware.html">Costruire software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WorkspaceSetup.html">WorkspaceSetup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystem.html">RadarSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemAnalisi.html">Analisi del problema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemProdottiAnalisi.html">Prodotti della analisi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemProgetto.html">Progettazione e sviluppo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RadarSystemSupporti.html">Supporti per comunicazioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RaspberrySoftware.html">RaspberrySoftware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RaspBasicCode.html">RaspBasicCode</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="Introduzione.html" title="next chapter">Introduzione</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Antonio Natali.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
