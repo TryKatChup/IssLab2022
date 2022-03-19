@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-TRIG = 12
+TRIG = 16
 ECHO = 18
 
 GPIO.setup(TRIG, GPIO.OUT)
@@ -24,12 +24,12 @@ def hello_world():
     GPIO.output(TRIG, False)
 
     # attendi che ECHO parta e memorizza tempo
-    while GPIO.input(ECHO) == 0:
-        pulse_start = time.time()
+    #while GPIO.input(ECHO) == 0:
+    pulse_start = time.time()
 
     # register the last timestamp at which the receiver detects the signal.
-    while GPIO.input(ECHO) == 1:
-        pulse_end = time.time()
+    #while GPIO.input(ECHO) == 1:
+    pulse_end = time.time()
 
     pulse_duration = pulse_end - pulse_start
     distance = pulse_duration * 17165  # distance = vt/2
