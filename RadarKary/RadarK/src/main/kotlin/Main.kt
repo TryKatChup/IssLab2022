@@ -7,9 +7,12 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.keyframes
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -23,6 +26,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import kotlinx.coroutines.*
@@ -60,7 +64,7 @@ fun app() {
 fun requestpointy(): Float {
     val client = HttpClient.newBuilder().build();
     val request = HttpRequest.newBuilder()
-        .uri(URI.create("http://192.168.1.100:9999"))
+        .uri(URI.create("http://192.168.1.6:9999"))
         .build();
 
     val response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -98,7 +102,7 @@ fun draw() {
                 val y = requestpointy()
                 val randomx = Random.nextInt(-15, 15)
                 punti[Offset(randomx.toFloat(), -y)] = Punto()
-                delay(1000)
+                delay(1500)
 
             }
         }
@@ -120,10 +124,10 @@ fun draw() {
 
 
 
-    Canvas(modifier = Modifier.fillMaxSize()) {
+    Canvas(modifier = Modifier.fillMaxSize().background(Color.Black)) {
         canvasWidth.value = size.width
         canvasHeight.value = size.height
-        radius.value = size.minDimension / 4
+        radius.value = size.minDimension / 3
         val centerx = size.center.x
         val centery = size.center.y
 
@@ -211,40 +215,42 @@ fun draw() {
         for (punto in punti.entries) {
 
             radiussave.value = radius.value
-            if (punto.value.visible && !punto.value.started) {
-                punto.value.time = LocalDateTime.now()
-                punto.value.started = true
-                coroutineScope.launch {
-                    withContext(Dispatchers.IO) {
+            if ((punto.key.x * punto.key.x) + (punto.key.y * punto.key.y) < radius.value.pow(2)) {
+                if (punto.value.visible && !punto.value.started) {
+                    punto.value.time = LocalDateTime.now()
+                    punto.value.started = true
+                    coroutineScope.launch {
+                        withContext(Dispatchers.IO) {
 
-                        delay(5000) //Todo: calculate this proportional to the rotation animation speed
-                        punto.value.visible = false
+                            delay(2000) //Todo: calculate this proportional to the rotation animation speed
+                            punto.value.visible = false
+                        }
                     }
+
                 }
 
+                drawCircle(
+                    color = Color(("ff" + "#00c20d".removePrefix("#").lowercase()).toLong(16)),
+                    center = Offset(
+                        x = (punto.key.x * (radius.value / radiussave.value)) + centerx,
+                        y = (punto.key.y * (radius.value / radiussave.value)) + centery
+                    ),
+                    radius = 5f,
+                    style = Fill,
+                    alpha = if (punto.value.visible && punto.value.started) (1 - (LocalDateTime.now().second - punto.value.time.second).toFloat() / 3).coerceIn(
+                        0f,
+                        1f
+                    ) else 0f
+                )
             }
-
-            drawCircle(
-                color = Color(("ff" + "#00c20d".removePrefix("#").lowercase()).toLong(16)),
-                center = Offset(
-                    x = (punto.key.x * (radius.value / radiussave.value)) + centerx,
-                    y = (punto.key.y * (radius.value / radiussave.value)) + centery
-                ),
-                radius = 5f,
-                style = Fill,
-                alpha = if (punto.value.visible && punto.value.started) (1 - (LocalDateTime.now().second - punto.value.time.second).toFloat() / 5).coerceIn(
-                    0f,
-                    1f
-                ) else 0f
-            )
         }
 
 
 
-        rotate(-rotationAnimation) {
+        rotate(rotationAnimation) {
             drawArc(
                 horizontalGradientBrush,
-                0f,
+                -60f,
                 60f,
                 useCenter = true,
                 size = Size(radius.value * 2, radius.value * 2),
@@ -267,32 +273,14 @@ fun draw() {
 
     }
 
-    Column {
-        Button({
-            radiussave.value = radius.value
-            var generare = 1000
-            while (generare != 0) {
-                val x1 = generaterandomx(radius.value).toFloat()
-                val y1 = generaterandomy(radius.value).toFloat()
-                if ((x1 * x1) + (y1 * y1) < radius.value.pow(2)) {
-
-                    punti[Offset(
-                        x1,
-                        y1
-                    )] = Punto()
-                    generare -= 1
-                }
-            }
-
-        }) {
-            Text("Ciao")
-        }
-
+    Column(modifier = Modifier.padding(start = 10.dp, top = 10.dp)) {
         Button({
             punti.clear()
 
-        }) {
-            Text("Ciao Ciao")
+        }, colors = ButtonDefaults.buttonColors(
+            backgroundColor = Color.Green,
+            contentColor = Color.Black)) {
+            Text("Reset")
         }
     }
 
