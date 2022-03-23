@@ -35,10 +35,7 @@ import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpResponse
 import java.time.LocalDateTime
-import kotlin.math.cos
 import kotlin.math.pow
-import kotlin.math.sin
-import kotlin.math.sqrt
 import kotlin.random.Random
 
 fun main() = application {
@@ -60,6 +57,11 @@ fun app() {
     }
 }
 
+/**
+ * Retrieves the detected distance from server.
+ *
+ * @return The distance from sonar.
+ */
 
 fun requestpointy(): Float {
     val client = HttpClient.newBuilder().build();
@@ -68,29 +70,12 @@ fun requestpointy(): Float {
         .build();
 
     val response = client.send(request, HttpResponse.BodyHandlers.ofString());
-    //println(response.body())
+    // println(response.body())
     return response.body().toFloat()
-}
-
-fun generaterandomtheta(): Pair<Double, Double> {
-    val t = (2) * Math.PI * Math.random()
-    val r = sqrt(Math.random())
-    return Pair(r, t)
-}
-
-fun generaterandomy(radius: Float): Double {
-    val a = generaterandomtheta()
-    return (radius * a.first * sin(a.second))
-}
-
-fun generaterandomx(radius: Float): Double {
-    val a = generaterandomtheta()
-    return (radius * a.first * cos(a.second))
 }
 
 @Composable
 fun draw() {
-
 
     val canvasWidth = remember { mutableStateOf(0f) }
     val canvasHeight = remember { mutableStateOf(0f) }
@@ -98,7 +83,6 @@ fun draw() {
     coroutineScope.launch {
         withContext(Dispatchers.IO) {
             while (true) {
-                //punti.clear()
                 val y = requestpointy()
                 val randomx = Random.nextInt(-15, 15)
                 punti[Offset(randomx.toFloat(), -y)] = Punto()
@@ -138,7 +122,6 @@ fun draw() {
                 Color.Transparent
             )
         )
-
 
 
         drawCircle(
@@ -272,7 +255,7 @@ fun draw() {
         }
 
     }
-
+    // Button
     Column(modifier = Modifier.padding(start = 10.dp, top = 10.dp)) {
         Button({
             punti.clear()
